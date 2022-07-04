@@ -14,10 +14,10 @@ $ git clone https://github.com/domilx/ReactPortfolio.git
 ```
 2. Install the prerequisites above.
 ```bash
-$ npm install
+$ yarn install
 ```
 3. Run the project.
 ```bash
-$ npm run dev
+$ yarn run
 ```
 
