@@ -3,8 +3,8 @@ export default {
   name: "domi",
   headerTaglineOne: "hi there 👋",
   headerTaglineTwo: "i'm Domenico Valentino",
-  headerTaglineThree: "programmer and web devloper 👨🏻‍💻",
-  headerTaglineFour: "based in Montreal, Cananda 📍",
+  headerTaglineThree: "programmer and web developer 👨🏻‍💻",
+  headerTaglineFour: "based in Montreal, Canada 📍",
 
   socials: [
     { title: "Github", link: "https://github.com/domilx" },
