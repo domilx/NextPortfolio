@@ -2,32 +2,6 @@
 
 ### Quick Preview - https://domidev.net/
 
-
-### Features - 
-
-- Modern Stack
-- Minimal Design
-- Easy To Customize
-- Easy To Browse
-
-
-### Sections
-
-- Header
-- Work
-- Services
-- About
-- Contact
-- Blog
-
-
-### How To Use
-
-- Clone this repo
-- run `yarn`
-- `yarn dev`
-
-
 ### Prerequisites
 
 * [NodeJS](https://nodejs.org/en/)
