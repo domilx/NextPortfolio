@@ -40,7 +40,7 @@ export default {
       description: "Robotics - Machinery, Operating Mills, and more - Coding in Java (WPILib)",
       imageSrc:
         "https://cdn.discordapp.com/attachments/852703866821804043/993606406798327859/277520762_653830402739252_2556665480946241788_n.jpg",
-      url: "https://www.team3990.com/",
+      url: "https://www.team3990.com/en/",
     },
     /*
     ,{
