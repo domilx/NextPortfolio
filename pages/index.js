@@ -6,6 +6,8 @@ import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
 import Footer from "../components/Footer";
 import Head from "next/head";
+import Typed from 'typed.js';
+import React from 'react';
 
 // Local Data
 import data from "../data";
@@ -16,8 +18,7 @@ export default function Home() {
   const aboutRef = useRef();
   const textOne = useRef();
   const textTwo = useRef();
-  const textThree = useRef();
-  const textFour = useRef();
+  const el = React.useRef(null);
 
   // Handling Scroll
   const handleWorkScroll = () => {
@@ -38,10 +39,23 @@ export default function Home() {
 
   useIsomorphicLayoutEffect(() => {
     stagger(
-      [textOne.current, textTwo.current, textThree.current, textFour.current],
+      [textOne.current, textTwo.current],
       { y: 30 },
       { y: 0 }
     );
+  }, []);
+
+  React.useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ['domi', 'Domenico Valentino', 'a Web Developper', 'a Software Developper', 'a Student', 'a Robotics Enthusiast', 'a Canadian'],
+      typeSpeed: 75,
+      loop: true,
+    });
+
+    return () => {
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
+    };
   }, []);
 
   return (
@@ -59,22 +73,13 @@ export default function Home() {
             <h1
               ref={textOne}
               className="text-8xl mob:text-3xl laptop:text-8xl mob:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5">
-              {data.headerTaglineOne}
+                Hi there 
+                <span className="waving-hand">👋</span>
             </h1>
             <h1
               ref={textTwo}
               className="text-8xl mob:text-3xl laptop:text-8xl mob:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5">
-              {data.headerTaglineTwo}
-            </h1>
-            <h1
-              ref={textThree}
-              className="text-8xl mob:text-3xl laptop:text-8xl mob:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5">
-              {data.headerTaglineThree}
-            </h1>
-            <h1
-              ref={textFour}
-              className="text-8xl mob:text-3xl laptop:text-8xl mob:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5">
-              {data.headerTaglineFour}
+              I'm <span ref={el} />
             </h1>
           </div>
 

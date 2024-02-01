@@ -13,22 +13,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         className="font-medium cursor-pointer mob:p-2 laptop:p-0">
         {data.name}.
       </h1>
-      {!isBlog ? (
         <div className="flex">
           <Button onClick={handleWorkScroll}>Work</Button>
           <Button onClick={handleAboutScroll}>About</Button>
-          <Button onClick={() => window.open("https://docs.google.com/document/d/e/2PACX-1vRkDAmn54XayFEJtOOMbKgJlFJEQwxzyk7q5N3N9XZo82RsdXLxM0UiZs2Yeh3WYnvlBm4fpHzzO47k/pub")}>
-          Curriculum Vitae
-          </Button>
         </div>
-      ) : (
-        <div className="flex">
-          <Button onClick={() => router.push("/")}>Home</Button>
-          <Button onClick={() => window.open("https://docs.google.com/document/d/e/2PACX-1vRkDAmn54XayFEJtOOMbKgJlFJEQwxzyk7q5N3N9XZo82RsdXLxM0UiZs2Yeh3WYnvlBm4fpHzzO47k/pub")}>
-          Curriculum Vitae
-          </Button>
-        </div>
-      )}
     </div>
   );
 };
