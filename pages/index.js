@@ -79,7 +79,7 @@ export default function Home() {
             <h1
               ref={textTwo}
               className="text-8xl mob:text-3xl laptop:text-8xl mob:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5">
-              I'm <span ref={el} />
+              I&apos;m <span ref={el} />
             </h1>
           </div>
 
